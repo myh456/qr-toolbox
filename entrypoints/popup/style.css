@@ -1,0 +1,27 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  /* 桌面浏览器 popup 的推荐宽度 */
+  width: 380px;
+  /* 高度让内容自然撑开，超出时滚动 */
+  min-height: 480px;
+  max-height: 600px;
+  /* Chrome popup 高度上限 */
+  overflow-y: auto;
+  font-family: system-ui, sans-serif;
+}
+
+/* Firefox Android / iOS Safari 等会以全屏形式打开 popup */
+@media (max-width: 600px) {
+  body {
+    width: 100vw;
+    min-height: 100vh;
+    max-height: none;
+  }
+}
